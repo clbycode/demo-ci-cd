@@ -31,4 +31,9 @@ class DemoController {
     fun hello(@PathVariable text: String):ResponseEntity<String>{
         return ResponseEntity.ok("Hello $text!!!")
     }
+
+    @GetMapping("/welcome")
+    fun welcome():ResponseEntity<String>{
+        return ResponseEntity.ok("Hello Welcome!!!")
+    }
 }
