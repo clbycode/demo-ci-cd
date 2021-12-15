@@ -13,8 +13,13 @@ import org.springframework.web.bind.annotation.RestController
 class DemoController {
 
     @GetMapping
-    fun index():ResponseEntity<String>{
+    fun demo():ResponseEntity<String>{
         return ResponseEntity.ok("Hello Me!!!")
+    }
+
+    @GetMapping("/index")
+    fun index():ResponseEntity<String>{
+        return ResponseEntity.ok("Hello Index!!!")
     }
 
     @GetMapping("/index/{text}")
