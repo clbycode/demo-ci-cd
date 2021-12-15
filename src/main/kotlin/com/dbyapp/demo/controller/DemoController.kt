@@ -21,4 +21,9 @@ class DemoController {
     fun index(@PathVariable text: String):ResponseEntity<String>{
         return ResponseEntity.ok("Hello Demo : $text")
     }
+
+    @GetMapping("/{text}")
+    fun hello(@PathVariable text: String):ResponseEntity<String>{
+        return ResponseEntity.ok("Hello $text!!!")
+    }
 }
